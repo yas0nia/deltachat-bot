@@ -5,6 +5,8 @@
 
 ## Easypeasy installation with ```alpaca.cpp```
 
+0. Install requirements: ``` pip install -r requirements.txt ```
+
 1. Download the model from here: https://huggingface.co/Sosaka/Alpaca-native-4bit-ggml/blob/main/ggml-alpaca-7b-q4.bin
 
 2. Download deltachat-rpc-server and make sure its in your PATH https://github.com/deltachat/deltachat-core-rust/tree/master/deltachat-rpc-server
