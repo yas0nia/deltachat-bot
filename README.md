@@ -51,6 +51,10 @@ python3 -m fastchat.serve.api --host localhost --port 8000
   }'
 ```
 
-### 3. Setup a delta-rpc-server for a Delta Chat bot and a delta-rpc-client, don’t forget to add delta-rpc-server to your path!
+### 3. Setup a delta-rpc-server for a Delta Chat bot and a delta-rpc-client
+
+  First, download the deltachat-rpc-server and make sure its in your PATH https://github.com/deltachat/deltachat-core-rust/tree/master/deltachat-rpc-server
+
+  Then, install deltachat-rpc-client for Python https://github.com/deltachat/deltachat-core-rust/tree/master/deltachat-rpc-client
 
 ### 4. Run the bot: ```python echobot.py BOT_MAIL BOT_PASSWD```
