@@ -7,7 +7,7 @@ import logging
 import sys
 
 from deltachat_rpc_client import DeltaChat, EventType, Rpc, SpecialContactId
-from Alpaca.alpaca_handler import fetch_llm_reply
+from alpaca_handler import fetch_llm_reply
 
 async def main():
     async with Rpc() as rpc:
