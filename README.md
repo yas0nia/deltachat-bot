@@ -1,6 +1,22 @@
 # A repository for a Digital Resistance Lab Hackathon problem "Self-hosted LLM with an interface to the messenger Delta Chat", Berlin April 2023
 
-## Installation
+## This README contains two installation guides: Easy installation with Alpaca LLM for low resources environment (you have a laptop with 8GB RAM and you're not deep into LLMs) or an experimental FastChat installation (will be really slow for noGPU environments)
+
+
+## Easypeasy installation with ```alpaca.cpp```
+
+1. Download the model from here: https://huggingface.co/Sosaka/Alpaca-native-4bit-ggml/blob/main/ggml-alpaca-7b-q4.bin
+
+2. Download deltachat-rpc-server and make sure its in your PATH https://github.com/deltachat/deltachat-core-rust/tree/master/deltachat-rpc-server
+
+3. Install deltachat-rpc-client for Python https://github.com/deltachat/deltachat-core-rust/tree/master/deltachat-rpc-client
+
+4. Put the model step 1. to the folder with the echobot.py
+
+5. Start your bot by running ```python echobot.py BOT_MAIL BOT_PASSWD```
+
+
+## FastChat implementation 
 
 ### 1. Prepare an LLM (Vicuna 7B, 13B or Fast Chat): https://github.com/lm-sys/FastChat
 
@@ -35,4 +51,4 @@ python3 -m fastchat.serve.api --host localhost --port 8000
 
 ### 3. Setup a delta-rpc-server for a Delta Chat bot and a delta-rpc-client, don’t forget to add delta-rpc-server to your path!
 
-### 4. Run the bot! 
+### 4. Run the bot: ```python echobot.py BOT_MAIL BOT_PASSWD```
