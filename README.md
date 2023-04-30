@@ -5,13 +5,13 @@
 
 ## Easypeasy installation with ```alpaca.cpp```
 
-1. Follow the instructions to download Alpaca.cpp and the model here: https://github.com/antimatter15/alpaca.cpp
+1. Download the model from here: https://huggingface.co/Sosaka/Alpaca-native-4bit-ggml/blob/main/ggml-alpaca-7b-q4.bin
 
 2. Download deltachat-rpc-server and make sure its in your PATH https://github.com/deltachat/deltachat-core-rust/tree/master/deltachat-rpc-server
 
 3. Install deltachat-rpc-client for Python https://github.com/deltachat/deltachat-core-rust/tree/master/deltachat-rpc-client
 
-4. Put the model and the chat executable from the step 1. to the folder with the echobot.py
+4. Put the model step 1. to the folder with the echobot.py
 
 5. Start your bot by running ```python echobot.py BOT_MAIL BOT_PASSWD```
 
