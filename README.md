@@ -1,5 +1,3 @@
-# A repository for a Digital Resistance Lab Hackathon problem "Self-hosted LLM with an interface to the messenger Delta Chat", Berlin April 2023
-
 ## This README contains two installation guides: Easy installation with Alpaca LLM for low resources environment (you have a laptop with 8GB RAM and you're not deep into LLMs) or an experimental FastChat installation (will be really slow for noGPU environments)
 
 
