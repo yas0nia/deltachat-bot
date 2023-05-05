@@ -1,0 +1,18 @@
+version: '3.8'
+services:
+  deltabot:
+    build:
+      context: .
+      dockerfile: DeltaBotDocker
+    environment:
+      MAIL_ADDRESS: tmp.47xrc@testrun.org
+      MAIL_PASSWORD: nORcJnTzVTyc
+    depends_on:
+      - fastchat
+
+  fastchat:
+    build:
+      context: .
+      dockerfile: FastChatDocker
+    ports:
+      - 8000:8000
