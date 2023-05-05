@@ -5,6 +5,7 @@ Example echo bot without using hooks
 import asyncio
 import logging
 import sys
+import config
 
 from deltachat_rpc_client import DeltaChat, EventType, Rpc, SpecialContactId
 from alpaca_handler import fetch_llm_reply
@@ -21,8 +22,8 @@ async def main():
         await account.set_config("bot", "1")
         if not await account.is_configured():
             logging.info("Account is not configured, configuring")
-            await account.set_config("addr", sys.argv[1])
-            await account.set_config("mail_pw", sys.argv[2])
+            await account.set_config("addr", config.addr)
+            await account.set_config("mail_pw", config.mail_pw)
             await account.configure()
             logging.info("Configured")
         else:
