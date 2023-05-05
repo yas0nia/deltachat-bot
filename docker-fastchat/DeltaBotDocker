@@ -7,17 +7,13 @@ COPY requirements.txt .
 COPY chatbot.py .
 COPY llm_handler.py .
 COPY deltachat-rpc-server-binary /usr/local/bin/deltachat-rpc-server 
-COPY deltachat-core-rust deltachat-core-rust
-# COPY accounts accounts
-RUN pip install -r requirements.txt
-RUN chmod +x /usr/local/bin/deltachat-rpc-server && deltachat-rpc-server
-RUN apt-get update
-# # Get Ubuntu packages
-RUN apt-get install -y \
-git
-RUN cd deltachat-core-rust/deltachat-rpc-client && \
+RUN apt-get update && \
+    apt-get install -y git && \
+    pip install -r requirements.txt && \
+    chmod +x /usr/local/bin/deltachat-rpc-server && \
+    git clone https://github.com/deltachat/deltachat-core-rust.git && \
+    cd deltachat-core-rust/deltachat-rpc-client && \
     pip install .
-
 
 ENV MAIL_ADDRESS=""
 ENV MAIL_PASSWORD=""
